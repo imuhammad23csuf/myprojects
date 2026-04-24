@@ -7,32 +7,56 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* (Your existing styles) */
-        .project {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            padding: 20px;
+        body {
+            padding: 40px 20px;
         }
-        .project h3 { color: #007bff; }
-        .project p { text-align: left; color: #343a40; }
-        .project img {
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            max-width: 100%;
+
+        #projects {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-family: 'Orbitron', 'Arial', sans-serif;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            background: linear-gradient(135deg, #00c6ff, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .section-divider {
+            width: 52px;
+            height: 3px;
+            background: linear-gradient(90deg, #0072ff, #00c6ff);
+            border-radius: 2px;
+            margin-bottom: 28px;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 32px;
         }
     </style>
 </head>
 <body>
-    <div id="projects" class="section">
-        <h2>Projects</h2>
-
-        <p><a href="index.html" class="top-back-to-home">Back to Home</a></p>
+    <div id="projects" class="section fade-in">
+        <div class="page-header">
+            <div>
+                <h2>Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            <a href="index.html" class="top-back-to-home">← Home</a>
+        </div>
 
         <!-- Project 1 -->
         <div class="project">
-            <h3><a href="https://github.com/imuhammad23csuf/CPSC-120-Lab11.git" style="color: #007bff; text-decoration: none;">Lab 11 Part-1</a></h3>
+            <h3><a href="https://github.com/imuhammad23csuf/CPSC-120-Lab11.git" style="color: #00c6ff; text-decoration: none;">Lab 11 Part-1</a></h3>
             <div class="flex-container">
                 <div class="flex-item">
                     <p>I defined the pizza calorie count calculation using size and toppings. The lab was very engaging upon applying these factors. It helped me understand object-oriented programming and its applications better.</p>
@@ -45,7 +69,7 @@
 
         <!-- Project 2 -->
         <div class="project">
-            <h3><a href="https://github.com/imuhammad23csuf/CPSC-120-Lab6.git" style="color: #007bff; text-decoration: none;">Lab 6 Part-1</a></h3>
+            <h3><a href="https://github.com/imuhammad23csuf/CPSC-120-Lab6.git" style="color: #00c6ff; text-decoration: none;">Lab 6 Part-1</a></h3>
             <div class="flex-container">
                 <div class="flex-item">
                     <p>I used factors like meat, loaf, and condiments and mastered creating a sandwich program. Using these factors made it engaging. I learned how to use loops and if statements effectively.</p>
@@ -58,7 +82,7 @@
 
         <!-- Project 3 -->
         <div class="project">
-            <h3><a href="https://github.com/imuhammad23csuf/CPSC-120-Lab-1.git" style="color: #007bff; text-decoration: none;">Lab 1 Part-1</a></h3>
+            <h3><a href="https://github.com/imuhammad23csuf/CPSC-120-Lab-1.git" style="color: #00c6ff; text-decoration: none;">Lab 1 Part-1</a></h3>
             <div class="flex-container">
                 <div class="flex-item">
                     <p>I used std::cout to print my name in the terminal. It helped me understand the standard library better. I also learned how to include a library using the #include function.</p>
@@ -76,7 +100,7 @@
                 <div class="flex-item">
                     <p>This is a paper on Meta's content moderation practices.</p>
                     <p>
-                        <a href="https://docs.google.com/document/d/14s6EPfPMST-_sKDjIWh-k4W223AULnpmLq8OX9WyIWs/edit?tab=t.0" style="color: #007bff; text-decoration: none;">
+                        <a href="https://docs.google.com/document/d/14s6EPfPMST-_sKDjIWh-k4W223AULnpmLq8OX9WyIWs/edit?tab=t.0" style="color: #00c6ff; text-decoration: none;">
                             View the paper on Google Docs
                         </a>
                     </p>
@@ -96,7 +120,7 @@
             </a>
         </div>
 
-        <p><a href="index.html" class="back-to-home">Back to Home</a></p>
+        <p><a href="index.html" class="back-to-home">← Back to Home</a></p>
     </div>
 </body>
 </html>

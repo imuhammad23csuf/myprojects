@@ -7,76 +7,121 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Additional styles specific to the about.html page */
-
         body {
-            font-family: 'Arial', sans-serif;
-            background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhackernoon.com%2Fimages%2Ff2px36fy.gif&f=1&nofb=1&ipt=5dcc517a9a0ee737b334433882bac8cb82629699c726c90d0067a688f3a4efe4&ipo=images") no-repeat center center fixed;
-            background-size: cover;
-            color: #fff; /* White text color */
-            margin: 20px;
-            padding: 20px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
+            padding: 40px 20px;
         }
 
         h2 {
-            color: #007bff;
+            font-family: 'Orbitron', 'Arial', sans-serif;
+            font-size: clamp(1.3rem, 4vw, 1.9rem);
+            background: linear-gradient(135deg, #00c6ff, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
         }
 
         p {
             text-align: left;
-            line-height: 1.6;
-            color: #fff; /* White text color */
+            line-height: 1.75;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 16px;
         }
 
-        .back-to-home {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
+        p a {
+            color: #00c6ff;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
+            border-bottom: 1px solid rgba(0, 198, 255, 0.35);
+            transition: color 0.2s, border-color 0.2s;
         }
 
-        .back-to-home:hover {
-            background-color: #0056b3;
+        p a:hover {
+            color: #fff;
+            border-color: #fff;
         }
 
-        .section {
+        .about-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .about-card {
+            background: rgba(8, 12, 30, 0.58);
+            border: 1px solid rgba(0, 198, 255, 0.22);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            padding: 40px;
+        }
+
+        .section-divider {
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(90deg, #0072ff, #00c6ff);
+            border-radius: 2px;
             margin-bottom: 20px;
         }
 
         .flex-container {
             display: flex;
             align-items: center;
+            gap: 36px;
+            flex-wrap: wrap;
         }
 
         .flex-item {
             flex: 1;
+            min-width: 200px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid #00c6ff;
+            box-shadow: 0 0 28px rgba(0, 198, 255, 0.45);
+            display: block;
+        }
+
+        .back-to-home {
+            display: inline-block;
+            padding: 11px 26px;
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0, 114, 255, 0.35);
+            margin-top: 8px;
+        }
+
+        .back-to-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(0, 198, 255, 0.55);
         }
     </style>
 </head>
 <body>
 
-    <div id="about" class="section">
-        <div class="flex-container">
-            <div class="flex-item">
-                <img src="images/Tuffyintegrity.webp" alt="Introduction Image" width="400">
-            </div>
-            <div class="flex-item">
-                <h2>About Me</h2>
-                <p>Hello! I am <span style="color: #fff;">Ibraheem Muhammad</span>, a Computer Science Major at <a href="https://www.fullerton.edu/">California State University Fullerton</a>, expected to graduate in May 2026.</p>
-                
-                <!-- Add more information about yourself as needed -->
+    <div id="about" class="about-wrapper fade-in">
+        <div class="about-card">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <img src="images/Tuffyintegrity.webp" alt="Introduction Image" width="300">
+                </div>
+                <div class="flex-item">
+                    <h2>About Me</h2>
+                    <div class="section-divider"></div>
+                    <p>Hello! I am <strong>Ibraheem Muhammad</strong>, a Computer Science Major at <a href="https://www.fullerton.edu/">California State University Fullerton</a>, expected to graduate in May 2026.</p>
 
-                <p><a href="index.html" class="back-to-home">Back to Home</a></p>
+                    <!-- Add more information about yourself as needed -->
+
+                    <p><a href="index.html" class="back-to-home">← Back to Home</a></p>
+                </div>
             </div>
         </div>
     </div>

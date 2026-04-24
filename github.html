@@ -7,82 +7,102 @@
     <link rel="stylesheet" href="style.css"> <!-- Link to your stylesheet -->
     <link rel="stylesheet" href="styles.css"> <!-- Link to your common styles -->
     <style>
-        /* Additional styles specific to the github.html page */
-
         body {
-            background-color: #f8f9fa;
-            color: #343a40;
-            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
         }
 
         header {
-            background-color: #007bff;
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
             color: #fff;
-            padding: 20px;
+            padding: 28px 20px;
+            text-align: center;
         }
 
         header h1 {
-            margin: 0; /* Ensure no default margin for h1 */
+            font-family: 'Orbitron', 'Arial', sans-serif;
+            font-size: clamp(1.2rem, 4vw, 1.7rem);
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 1px;
         }
 
         main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
+            max-width: 700px;
+            width: calc(100% - 40px);
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 18px;
+            background: rgba(8, 12, 30, 0.58);
+            border: 1px solid rgba(0, 198, 255, 0.22);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            text-align: center;
         }
 
         h2 {
-            color: #007bff;
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-size: 1.35rem;
+            color: #00c6ff;
+            margin-bottom: 14px;
         }
 
         p {
             text-align: left;
-            line-height: 1.6;
-            color: #343a40;
-        }
-
-        .back-to-home {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        .back-to-home:hover {
-            background-color: #0056b3;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 28px;
         }
 
         .github-link {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
+            border-radius: 50px;
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0, 114, 255, 0.35);
+            margin-bottom: 14px;
         }
 
         .github-link:hover {
-            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(0, 198, 255, 0.55);
+        }
+
+        .back-to-home {
+            display: inline-block;
+            padding: 11px 26px;
+            background: transparent;
+            color: #00c6ff;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 1.5px solid rgba(0, 198, 255, 0.5);
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            margin-left: 12px;
+        }
+
+        .back-to-home:hover {
+            background: rgba(0, 198, 255, 0.1);
+            box-shadow: 0 0 16px rgba(0, 198, 255, 0.3);
         }
 
         footer {
-            margin-top: 20px;
-            color: #868e96;
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 13px;
         }
     </style>
 </head>

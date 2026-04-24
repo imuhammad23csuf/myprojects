@@ -1,75 +1,152 @@
-/* style.css */
-/* Add your custom styles for the entire site here */
+/* style.css — modernized portfolio stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@600;700&display=swap');
 
-/* styles.css */
-/* Add your custom styles specific to this page here */
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhackernoon.com%2Fimages%2Ff2px36fy.gif&f=1&nofb=1&ipt=5dcc517a9a0ee737b334433882bac8cb82629699c726c90d0067a688f3a4efe4&ipo=images") no-repeat center center fixed;
-    background-size: cover;
-    color: #f0e995;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ── Design tokens ──────────────────────────────────── */
+:root {
+    --primary:       #00c6ff;
+    --primary-dark:  #0072ff;
+    --accent:        #a855f7;
+    --glass-bg:      rgba(8, 12, 30, 0.58);
+    --glass-border:  rgba(0, 198, 255, 0.22);
+    --glass-shadow:  0 8px 32px rgba(0, 0, 0, 0.55);
+    --radius:        18px;
+    --radius-sm:     10px;
+    --transition:    0.3s ease;
 }
 
+/* ── Reset ──────────────────────────────────────────── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Base ───────────────────────────────────────────── */
+body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhackernoon.com%2Fimages%2Ff2px36fy.gif&f=1&nofb=1&ipt=5dcc517a9a0ee737b334433882bac8cb82629699c726c90d0067a688f3a4efe4&ipo=images") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* ── Shared glass card ──────────────────────────────── */
+.glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 40px;
+}
+
+/* ── Section wrapper ─────────────────────────────────── */
+.section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ── Flex helpers ────────────────────────────────────── */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* ── Circular profile image ─────────────────────────── */
+.flex-item img {
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 24px rgba(0, 198, 255, 0.45);
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ── Project cards ──────────────────────────────────── */
 .project {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    box-shadow: var(--glass-shadow);
+    margin-bottom: 24px;
+    padding: 28px;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0, 198, 255, 0.22);
+    border-color: rgba(0, 198, 255, 0.45);
 }
 
 .project h3 {
-    color: #007bff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 10px;
 }
 
 .project p {
     text-align: left;
-    color: #343a40;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
 }
 
 .project img {
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
     max-width: 100%;
+    display: block;
 }
 
-/* Circular image for the introduction */
-.flex-item img {
-    border-radius: 50%; /* Make it circular */
-}
-
-.back-to-home {
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 50px; /* Make it circular */
-    display: inline-block;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.back-to-home:hover {
-    background-color: #0056b3;
-}
-
+/* ── Shared link buttons ────────────────────────────── */
+.back-to-home,
 .top-back-to-home {
-    background-color: #007bff;
+    display: inline-block;
+    padding: 11px 26px;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 50px; /* Make it circular */
-    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform var(--transition), box-shadow var(--transition);
+    box-shadow: 0 4px 16px rgba(0, 114, 255, 0.35);
 }
 
+.back-to-home:hover,
 .top-back-to-home:hover {
-    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0, 198, 255, 0.55);
+}
+
+/* ── Fade-in animation ──────────────────────────────── */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeInUp 0.75s ease both;
+}
+
+.fade-in-delay {
+    animation: fadeInUp 0.75s 0.2s ease both;
+}
+
+.fade-in-delay-2 {
+    animation: fadeInUp 0.75s 0.4s ease both;
 }
