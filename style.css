@@ -38,6 +38,8 @@ body {
     box-shadow: var(--glass-shadow);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
+    isolation: isolate;
+    overflow: hidden;
     padding: 40px;
 }
 
@@ -79,7 +81,9 @@ body {
     border: 1px solid var(--glass-border);
     border-radius: var(--radius);
     box-shadow: var(--glass-shadow);
+    isolation: isolate;
     margin-bottom: 24px;
+    overflow: hidden;
     padding: 28px;
     transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
@@ -149,4 +153,24 @@ body {
 
 .fade-in-delay-2 {
     animation: fadeInUp 0.75s 0.4s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-in,
+    .fade-in-delay,
+    .fade-in-delay-2 {
+        animation: none;
+    }
+
+    .project,
+    .back-to-home,
+    .top-back-to-home {
+        transition: none;
+    }
+
+    .project:hover,
+    .back-to-home:hover,
+    .top-back-to-home:hover {
+        transform: none;
+    }
 }
